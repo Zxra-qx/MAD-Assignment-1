@@ -1,64 +1,19 @@
-<SafeAreaProvider>
-  <SafeAreaView style={styles.safeArea}>
-    <ScrollView
-      contentContainerStyle={styles.scrollContent}
-      showsVerticalScrollIndicator={false}
-    >
-      <View style={styles.header}>
-        <Text style={styles.backButton}>‹</Text>
+<SafeAreaView
+  style={styles.container}
+  edges={["left", "right", "bottom"]}
+>
+  <View style={styles.header}>
+    <Text style={styles.backArrow}>‹</Text>
 
-        <View style={styles.headerText}>
-          <Text style={styles.accountName}>OOTD_EVERYDAY</Text>
-          <Text style={styles.postText}>Posts</Text>
-        </View>
+    <View style={styles.headerTitleContainer}>
+      <Text style={styles.headerSubTitle}>Posts</Text>
+      <Text style={styles.headerTitle}>OOTD_EVERYDAY</Text>
+    </View>
 
-        <View style={styles.headerSpace} />
-      </View>
+    <View style={styles.spacer} />
+  </View>
 
-
-
-      safeArea: {
-  flex: 1,
-  backgroundColor: "white",
-},
-
-scrollContent: {
-  backgroundColor: "white",
-  paddingBottom: 20,
-},
-
-header: {
-  flexDirection: "row",
-  alignItems: "center",
-  paddingHorizontal: 15,
-  paddingVertical: 8,
-  borderBottomWidth: 1,
-  borderBottomColor: "#dddddd",
-},
-
-backButton: {
-  width: 30,
-  color: "black",
-  fontSize: 38,
-},
-
-headerText: {
-  flex: 1,
-  alignItems: "center",
-},
-
-headerSpace: {
-  width: 30,
-},
-
-accountName: {
-  color: "grey",
-  fontSize: 12,
-  fontWeight: "bold",
-},
-
-postText: {
-  color: "black",
-  fontSize: 18,
-  fontWeight: "bold",
-},
+  <ScrollView contentContainerStyle={styles.scroll}>
+    {/* The other sections go here */}
+  </ScrollView>
+</SafeAreaView>
